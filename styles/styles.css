@@ -1,88 +1,192 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
-    height:1000px;
-    scroll-behavior: smooth;
-    
-}
-body{
-    height: 1000px;
-    background-color: black;
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 
-
-
-.logo{
-    height: 250px;
-    width:250px;
-    display:flex;
+header {
+  margin-bottom: 100px;
+}
+.logo {
+  height: 250px;
+  width: 250px;
+  display: flex;
 }
 
 li {
-    display: inline;
+  display: inline;
 }
 li {
-    float: left;
-
+  float: left;
 }
-  
+body {
+  margin-top: 100px;
+}
 a {
-    display: block;
-    padding: 8px;
-    background-color: #26272c;
+  display: block;
+  padding: 8px;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #26272c;
-  }
-  
-  li {
-      width: 150px;
-     float: left;
-    }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  
-  li a:hover {
-    transition: 0.4s;
-    background-color: #191a1d;
-    
-  }
- 
-  
-  header{
-      align-items: center;
-      display: flex;
-      height:250px;
-    
-   }
-button{
-    width: 30px;
-    height: 30px;
-    padding: 6px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-}
-button:hover{
-   
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
+li {
+  padding: 10px;
+}
 
+body {
+  margin-top: 100px;
+  background-image: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+button {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
 
+.nav-link {
+  margin-top: 30px;
+}
+nav{
+    box-shadow:5px 8px #c9d6ff;
+}
+.title {
+  text-align: center;
+  margin-right: 220px;
+  margin-top: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+  font-size: 40px;
+  line-height: 80px;
+  color: #3d3d3d;
+  padding: 0.1px;
+  border-radius: 4px 4px gray;
+}
+.title:hover {
+  text-shadow: gray;
+}
+.why-crypto{
+  font-size: 17px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 50px 20px;
+}
 
+.typewriter{
+    display:block;
+    height:50px;
+    font-size:35px;
+    text-transform:lowercase;
+    opacity:.8;
+    font-family: 'Rubik', sans-serif;
+    text-align:center;
+    margin-top: 100px;
+    padding: 100px;
+}
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+    
+  }
+  div[class*=box] {
+    height: 33.33%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-1 { background-color: #FF6766; }
+  
+  
+  .btn {
+    
+    margin-top:150px ;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+  }
+  
 
-
+  .btn-one {
+    color: rgb(0, 0, 0);
+    transition: all 0.3s;
+    position: relative;
+  }
+  .btn-one span {
+    transition: all 0.3s;
+  }
+  .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 2.5px;
+    border-bottom-width: 2.5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    transform: scale(0.1, 1);
+  }
+  .btn-one:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+  
+  
