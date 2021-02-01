@@ -23,6 +23,10 @@ li {
 li {
   float: left;
 }
+.blockoPayBtn{
+  margin-top: 400px;
+  margin-left: 300px;
+}
 body {
   margin-top: 100px;
 }
